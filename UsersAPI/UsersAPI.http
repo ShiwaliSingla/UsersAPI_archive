@@ -1,0 +1,27 @@
+@UsersAPI_HostAddress = http://localhost:5044
+
+###
+POST {{UsersAPI_HostAddress}}/api/user
+Content-Type: application/json
+Accept: application/json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com"
+}
+###
+GET {{UsersAPI_HostAddress}}/api/user/c5acd12e-a4f2-4dfc-b8c0-5a4512371955
+Accept: application/json
+###
+GET {{UsersAPI_HostAddress}}/api/user/b8a3b107-1e89-4f98-b8d3-dc5d1f9247d6,true
+Accept: application/json
+###
+PUT {{UsersAPI_HostAddress}}/api/user/c5acd12e-a4f2-4dfc-b8c0-5a4512371955
+Content-Type: application/json
+Accept: application/json
+{
+  "id": "c5acd12e-a4f2-4dfc-b8c0-5a4512371955",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com"
+}
